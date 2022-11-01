@@ -6,12 +6,25 @@
 //
 
 import SwiftUI
+import NavigationBackport
 
 @main
 struct JaqsyApp: App {
+    @ObservedObject var router = Router.shared
+    
     var body: some Scene {
         WindowGroup {
-            OnboardingView()
+            NBNavigationStack(path: $router.path) {
+                OnboardingAssembly().build()
+                    .nbNavigationDestination(for: RouteEnum.self) { route in
+                        switch route {
+                        case .onboarding:
+                            OnboardingAssembly().build()
+                        case .home:
+                            HomeView()
+                        }
+                    }
+            }
         }
     }
 }
