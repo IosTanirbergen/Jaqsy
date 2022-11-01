@@ -7,7 +7,13 @@
 
 import SwiftUI
 
-final class OnboardingViewModel {
+protocol OnboardingViewModelOutput {
+    func getOnboardingItems() -> [OnboardingModel]
+    func getOnboardingItemCount() -> Int
+    func skipButtonDisabled(_ selectedIndex: Int) -> Bool
+}
+
+final class OnboardingViewModel: OnboardingViewModelOutput {
     private let onboardingItem: [OnboardingModel] = [
         .init(
             image: "onboarding.first",
@@ -26,6 +32,12 @@ final class OnboardingViewModel {
         )
     ]
     
+    @State var showHomeIfNeeded: Bool {
+        didSet {
+            showHomeIfNeeded = getOnboardingItemCount() == 3
+        }
+    }
+    
     func getOnboardingItems() -> [OnboardingModel] {
         return onboardingItem
     }
@@ -36,5 +48,9 @@ final class OnboardingViewModel {
     
     func skipButtonDisabled(_ selectedIndex: Int) -> Bool {
         return selectedIndex == getOnboardingItemCount() - 1
+    }
+    
+    init(showHomeIfNeeded: Bool = false) {
+        self.showHomeIfNeeded = showHomeIfNeeded
     }
 }

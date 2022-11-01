@@ -15,6 +15,11 @@
 		B94F6C6028FC71DC004D06E0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94F6C5F28FC71DC004D06E0 /* OnboardingView.swift */; };
 		B94F6C6228FC71DD004D06E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94F6C6128FC71DD004D06E0 /* Assets.xcassets */; };
 		B94F6C6528FC71DD004D06E0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94F6C6428FC71DD004D06E0 /* Preview Assets.xcassets */; };
+		B9723D2A29106906008C3A7E /* NavigationBackport in Frameworks */ = {isa = PBXBuildFile; productRef = B9723D2929106906008C3A7E /* NavigationBackport */; };
+		B9723D2D29106925008C3A7E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9723D2C29106925008C3A7E /* Router.swift */; };
+		B9723D2F29106958008C3A7E /* RouteEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9723D2E29106958008C3A7E /* RouteEnum.swift */; };
+		B9723D3229106C96008C3A7E /* OnboardingAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9723D3129106C96008C3A7E /* OnboardingAssembly.swift */; };
+		B9912C572908855E005DCB2A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9912C562908855E005DCB2A /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,10 @@
 		B94F6C5F28FC71DC004D06E0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		B94F6C6128FC71DD004D06E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B94F6C6428FC71DD004D06E0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B9723D2C29106925008C3A7E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B9723D2E29106958008C3A7E /* RouteEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteEnum.swift; sourceTree = "<group>"; };
+		B9723D3129106C96008C3A7E /* OnboardingAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAssembly.swift; sourceTree = "<group>"; };
+		B9912C562908855E005DCB2A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9723D2A29106906008C3A7E /* NavigationBackport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				B92CB76E28FF0E7A008FCF4A /* Onboarding */,
+				B9912C53290884B0005DCB2A /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -52,6 +63,7 @@
 		B92CB76E28FF0E7A008FCF4A /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				B9723D3029106C88008C3A7E /* Assembly */,
 				B92CB76F28FF0E82008FCF4A /* Model */,
 				B92CB77528FF0FAE008FCF4A /* ViewModel */,
 				B92CB77028FF0E8A008FCF4A /* View */,
@@ -88,6 +100,7 @@
 		B92CB77828FF111F008FCF4A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				B9723D2B29106916008C3A7E /* Router */,
 				B94F6C5D28FC71DC004D06E0 /* JaqsyApp.swift */,
 			);
 			path = Application;
@@ -137,6 +150,47 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B9723D2B29106916008C3A7E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B9723D2C29106925008C3A7E /* Router.swift */,
+				B9723D2E29106958008C3A7E /* RouteEnum.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		B9723D3029106C88008C3A7E /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B9723D3129106C96008C3A7E /* OnboardingAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B9912C53290884B0005DCB2A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				B9912C54290884D0005DCB2A /* ViewModel */,
+				B9912C55290884D5005DCB2A /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		B9912C54290884D0005DCB2A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B9912C55290884D5005DCB2A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B9912C562908855E005DCB2A /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +207,9 @@
 			dependencies = (
 			);
 			name = Jaqsy;
+			packageProductDependencies = (
+				B9723D2929106906008C3A7E /* NavigationBackport */,
+			);
 			productName = Jaqsy;
 			productReference = B94F6C5A28FC71DC004D06E0 /* Jaqsy.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +238,9 @@
 				Base,
 			);
 			mainGroup = B94F6C5128FC71DC004D06E0;
+			packageReferences = (
+				B9723D2829106906008C3A7E /* XCRemoteSwiftPackageReference "NavigationBackport" */,
+			);
 			productRefGroup = B94F6C5B28FC71DC004D06E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,9 +270,13 @@
 				B94F6C6028FC71DC004D06E0 /* OnboardingView.swift in Sources */,
 				B94F6C5E28FC71DC004D06E0 /* JaqsyApp.swift in Sources */,
 				B92CB77228FF0EB4008FCF4A /* OnboardingModel.swift in Sources */,
+				B9723D2F29106958008C3A7E /* RouteEnum.swift in Sources */,
 				B92CB77728FF0FC3008FCF4A /* OnboardingViewModel.swift in Sources */,
+				B9723D2D29106925008C3A7E /* Router.swift in Sources */,
 				B92CB77F28FF5012008FCF4A /* CircularProgressView.swift in Sources */,
+				B9912C572908855E005DCB2A /* HomeView.swift in Sources */,
 				B92CB77A28FF11C9008FCF4A /* OnboardingContentView.swift in Sources */,
+				B9723D3229106C96008C3A7E /* OnboardingAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,7 +415,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -383,7 +447,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +483,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B9723D2829106906008C3A7E /* XCRemoteSwiftPackageReference "NavigationBackport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/NavigationBackport";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B9723D2929106906008C3A7E /* NavigationBackport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B9723D2829106906008C3A7E /* XCRemoteSwiftPackageReference "NavigationBackport" */;
+			productName = NavigationBackport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B94F6C5228FC71DC004D06E0 /* Project object */;
 }

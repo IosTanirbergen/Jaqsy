@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    private var viewModel = OnboardingViewModel()
+    var viewModel: OnboardingViewModel
+    var router: Router
     
     @State var selectedIndex: Int = 0
     @State var progress: CGFloat = 0
@@ -48,6 +49,10 @@ struct OnboardingView: View {
                         selectedIndex = selectedIndex + 1
                     }
                 }
+                
+                if progress.isCanonical {
+                    router.showHome()
+                }
             }, label: {
                 CircularProgressView(progress: $progress)
             })
@@ -65,8 +70,9 @@ struct OnboardingView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+
+struct OnboardingPreview_Provider: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
+        OnboardingAssembly().build()
     }
 }
