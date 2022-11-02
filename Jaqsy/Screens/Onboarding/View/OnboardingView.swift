@@ -48,11 +48,11 @@ struct OnboardingView: View {
                     withAnimation {
                         selectedIndex = selectedIndex + 1
                     }
+                    
+                    return
                 }
                 
-                if progress.isCanonical {
-                    router.showHome()
-                }
+                router.showHome()
             }, label: {
                 CircularProgressView(progress: $progress)
             })
