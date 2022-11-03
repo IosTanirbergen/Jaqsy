@@ -21,12 +21,10 @@ struct OnboardingView: View {
                 Button(action: {}) {
                     Text("Skip")
                         .foregroundColor(Color.black)
-                        .padding(.top, 20)
                         .padding(.trailing, 20)
                 }
                 .disabled(viewModel.skipButtonDisabled(selectedIndex))
             }
-            .padding(.horizontal)
             
             TabView(selection: $selectedIndex) {
                 ForEach(0..<viewModel.getOnboardingItemCount()) { index in
@@ -37,29 +35,29 @@ struct OnboardingView: View {
             .onChange(of: selectedIndex, perform: { value in
                 updateProgress()
             })
-            .frame(height: 520)
-            .padding(.top, 30)
-            .clipped()
-            
-            Spacer(minLength: 15.0)
+            .frame(height: ScreenSize.height / 1.5)
             
             Button(action: {
                 if selectedIndex < viewModel.getOnboardingItemCount() - 1 {
                     withAnimation {
                         selectedIndex = selectedIndex + 1
                     }
-                    
+
                     return
                 }
-                
+
                 router.showHome()
             }, label: {
                 CircularProgressView(progress: $progress)
             })
-            .padding(.bottom, 30.0)
+            .padding(.bottom, 16.0)
         }
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear() {
             updateProgress()
+        }
+        .onDisappear() {
+            AppState().isHideOnboardingFlow = true
         }
     }
     

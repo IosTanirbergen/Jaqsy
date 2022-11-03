@@ -11,6 +11,11 @@
 		B92CB77728FF0FC3008FCF4A /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92CB77628FF0FC3008FCF4A /* OnboardingViewModel.swift */; };
 		B92CB77A28FF11C9008FCF4A /* OnboardingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92CB77928FF11C9008FCF4A /* OnboardingContentView.swift */; };
 		B92CB77F28FF5012008FCF4A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92CB77E28FF5012008FCF4A /* CircularProgressView.swift */; };
+		B9473B6C29132DF100FD38C7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9473B6B29132DF100FD38C7 /* HomeViewModel.swift */; };
+		B9473B6F29132E2400FD38C7 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9473B6E29132E2400FD38C7 /* HomeAssembly.swift */; };
+		B9473B72291331CE00FD38C7 /* SizeConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9473B71291331CE00FD38C7 /* SizeConfigurations.swift */; };
+		B9473B752913405A00FD38C7 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9473B742913405A00FD38C7 /* UserDefaults.swift */; };
+		B9473B77291346AE00FD38C7 /* LaunchStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9473B76291346AE00FD38C7 /* LaunchStateView.swift */; };
 		B94F6C5E28FC71DC004D06E0 /* JaqsyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94F6C5D28FC71DC004D06E0 /* JaqsyApp.swift */; };
 		B94F6C6028FC71DC004D06E0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94F6C5F28FC71DC004D06E0 /* OnboardingView.swift */; };
 		B94F6C6228FC71DD004D06E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94F6C6128FC71DD004D06E0 /* Assets.xcassets */; };
@@ -28,6 +33,11 @@
 		B92CB77928FF11C9008FCF4A /* OnboardingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContentView.swift; sourceTree = "<group>"; };
 		B92CB77E28FF5012008FCF4A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		B92CB78028FF5FF0008FCF4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9473B6B29132DF100FD38C7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B9473B6E29132E2400FD38C7 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		B9473B71291331CE00FD38C7 /* SizeConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizeConfigurations.swift; sourceTree = "<group>"; };
+		B9473B742913405A00FD38C7 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		B9473B76291346AE00FD38C7 /* LaunchStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchStateView.swift; sourceTree = "<group>"; };
 		B94F6C5A28FC71DC004D06E0 /* Jaqsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jaqsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B94F6C5D28FC71DC004D06E0 /* JaqsyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JaqsyApp.swift; sourceTree = "<group>"; };
 		B94F6C5F28FC71DC004D06E0 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -102,6 +112,7 @@
 			children = (
 				B9723D2B29106916008C3A7E /* Router */,
 				B94F6C5D28FC71DC004D06E0 /* JaqsyApp.swift */,
+				B9473B76291346AE00FD38C7 /* LaunchStateView.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -109,10 +120,36 @@
 		B92CB77D28FF4CE2008FCF4A /* Resources + Helps */ = {
 			isa = PBXGroup;
 			children = (
+				B9473B732913404F00FD38C7 /* Foundation */,
+				B9473B70291331B700FD38C7 /* SizeConfigurations */,
 				B92CB78028FF5FF0008FCF4A /* Info.plist */,
 				B94F6C6128FC71DD004D06E0 /* Assets.xcassets */,
 			);
 			path = "Resources + Helps";
+			sourceTree = "<group>";
+		};
+		B9473B6D29132E1700FD38C7 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				B9473B6E29132E2400FD38C7 /* HomeAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		B9473B70291331B700FD38C7 /* SizeConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				B9473B71291331CE00FD38C7 /* SizeConfigurations.swift */,
+			);
+			path = SizeConfigurations;
+			sourceTree = "<group>";
+		};
+		B9473B732913404F00FD38C7 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B9473B742913405A00FD38C7 /* UserDefaults.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		B94F6C5128FC71DC004D06E0 = {
@@ -170,6 +207,7 @@
 		B9912C53290884B0005DCB2A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B9473B6D29132E1700FD38C7 /* Assembly */,
 				B9912C54290884D0005DCB2A /* ViewModel */,
 				B9912C55290884D5005DCB2A /* View */,
 			);
@@ -179,6 +217,7 @@
 		B9912C54290884D0005DCB2A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B9473B6B29132DF100FD38C7 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -268,15 +307,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				B94F6C6028FC71DC004D06E0 /* OnboardingView.swift in Sources */,
+				B9473B6C29132DF100FD38C7 /* HomeViewModel.swift in Sources */,
 				B94F6C5E28FC71DC004D06E0 /* JaqsyApp.swift in Sources */,
 				B92CB77228FF0EB4008FCF4A /* OnboardingModel.swift in Sources */,
 				B9723D2F29106958008C3A7E /* RouteEnum.swift in Sources */,
 				B92CB77728FF0FC3008FCF4A /* OnboardingViewModel.swift in Sources */,
+				B9473B6F29132E2400FD38C7 /* HomeAssembly.swift in Sources */,
 				B9723D2D29106925008C3A7E /* Router.swift in Sources */,
 				B92CB77F28FF5012008FCF4A /* CircularProgressView.swift in Sources */,
 				B9912C572908855E005DCB2A /* HomeView.swift in Sources */,
 				B92CB77A28FF11C9008FCF4A /* OnboardingContentView.swift in Sources */,
+				B9473B72291331CE00FD38C7 /* SizeConfigurations.swift in Sources */,
+				B9473B752913405A00FD38C7 /* UserDefaults.swift in Sources */,
 				B9723D3229106C96008C3A7E /* OnboardingAssembly.swift in Sources */,
+				B9473B77291346AE00FD38C7 /* LaunchStateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -387,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -412,9 +456,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,9 +489,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
