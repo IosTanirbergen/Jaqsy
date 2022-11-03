@@ -15,13 +15,14 @@ struct JaqsyApp: App {
     var body: some Scene {
         WindowGroup {
             NBNavigationStack(path: $router.path) {
-                OnboardingAssembly().build()
+                LaunchStateView()
                     .nbNavigationDestination(for: RouteEnum.self) { route in
                         switch route {
                         case .onboarding:
                             OnboardingAssembly().build()
                         case .home:
-                            HomeView()
+                            HomeAssembly().build()
+                                .navigationBarBackButtonHidden()
                         }
                     }
             }

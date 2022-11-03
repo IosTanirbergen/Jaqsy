@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct HomeView: View {
+    var homeViewModel: HomeViewModel
+    var router: Router
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-        
+        ZStack {
+             
+        }
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeAssembly().build()
     }
 }

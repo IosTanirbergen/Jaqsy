@@ -14,7 +14,7 @@ struct CircularProgressView: View {
         Image(systemName: "arrow.right")
             .font(.system(size: 26.0))
             .foregroundColor(Color.white)
-            .frame(width: 72, height: 72)
+            .frame(width: ScreenSize.width / 7.4, height: ScreenSize.width / 7.4)
             .background(Color.blue)
             .clipShape(Circle())
             .padding()
